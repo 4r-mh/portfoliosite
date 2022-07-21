@@ -1,0 +1,445 @@
+@charset "utf-8";
+/*
+base
+  */
+  html { 
+    scroll-behavior: smooth;
+  } 
+  
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+}
+
+
+/* 
+header
+  */
+.header{
+margin: 0;
+height: 60px;
+background-color: #ffffff;
+position: relative;
+z-index: 2;
+}
+
+
+.icon,.menu {
+    list-style: none;
+    padding: 0px 30px;
+}
+
+.icon{
+  padding-top: 8px;
+    margin: 0;
+}
+
+.icon li{
+    float: left;
+   padding-left: 20px;
+   padding-top: 10px;
+}
+.icon li :hover{
+    transition: .3s;
+    opacity: 0.9;
+}
+.github{
+  padding-top: 5px !important;
+
+}
+
+.menu{
+    float: right;
+    margin-left: 20px;
+}
+.menu li {
+    float: left;
+    margin-left: 20px;
+    color: #333;
+    opacity: .85;
+}
+
+.menu li a{
+    text-decoration: none;
+    margin-left: 20px;
+    color: #333;
+}
+.menu li a:hover {
+    transition: 0.3s;
+    color: #5292ad;
+    }
+
+.always{
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:1;
+        background:#ffffff8a;
+        height: 30px;
+        width:100%;
+        padding-right: 30px;
+      
+}
+.always ul{
+    list-style:none;
+  display: flex;
+  margin:0;
+ padding: 5px;
+float: right;
+}
+
+.always ul li{
+  padding-left: 38px;
+
+}
+.always ul li a{
+   color: #333;
+   text-decoration: none;
+   opacity: 0.8;
+   transition: 0.3s;
+  }
+  .always ul li a:hover{
+    color:  #5292ad;
+  }
+
+/* 
+Top
+ */
+.top{
+height:570px;
+position: relative;
+background-color: #7dcfe4;
+}
+
+.top video{
+    width: 100%;
+    height: 570px;
+    object-fit: cover; 
+    position: absolute;
+}
+
+.top h1{
+        margin: 0;
+        font-size: 130px;
+        text-align: center;
+        opacity: 0.6;
+        color: #55555c;
+        padding-top: 120px;
+
+
+    }
+ .top p{
+        margin: 0;
+        font-size: 20px;
+        text-align: center;
+        opacity: 0.6;
+        color: #55555c;
+        padding-top: 30px;
+
+
+    }
+
+
+/* 
+About
+ */
+.about-top{
+float:left;
+width: 40%;
+margin: 150px 0;
+position: relative;
+}
+
+.about-r{
+    float:right;
+    width: 60%;
+    }
+
+.about-title{
+font-size: 50px;
+font-weight: bold;
+padding-left: 80px;
+padding-bottom: 0px;
+border-bottom: 3px solid red;
+}
+.about-image{
+    width: 500px;
+    text-decoration: none;
+    padding: 0 0 0 80px;
+
+}
+.about-intro{
+    display: block;
+    width: 420px;
+    padding: 20px 20px;
+
+    margin: 0;
+    font-size: 15px;
+    position: absolute;
+  top: 79%;
+  left: 80px;
+  background-color:rgba(255, 255, 255, 0.656)
+
+    
+    
+}
+
+.about-story{
+padding-top: 300px;
+margin-bottom: -150px;
+}
+.about-btn{
+    float: right;
+    padding-right: 170px;
+
+}
+
+.btn {
+    padding: 20px;
+    background:#5292ad;
+	border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    width: 190px;
+    height: 190px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    text-decoration: none;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    transition: .3s;
+    text-align: center;
+    
+  }
+
+  .btn:hover {
+    filter: drop-shadow(0 0 0 rgba(0,0,0,0.0));
+  }
+  
+/* オーバーレイ */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);  
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+  }
+  
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
+/* モーダルウィンドウ */
+.modal {
+    max-width: 1300px;
+    width: 90%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    overflow-y: auto;
+    overflow-y: scroll;
+  }
+
+  .modal.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
+  .modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: .3s;
+  }
+  .modal .close:hover{
+    opacity: 0.6;
+  }
+  .modal-el{
+    text-align: center;
+    margin: 30px;
+  }
+  .modal-el h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-align: center;
+    display:inline;
+    padding: 20px;
+  }
+  
+  .modal-photo {
+    text-align: center;
+  }
+  .modal-photo img{
+    margin: 20px;
+  }
+  .clear_element{
+	clear:both;
+}
+
+
+/* 
+Skills
+ */
+.skills{
+    position: relative;
+    height: 552px;
+    margin: 150px 40px;
+}
+
+.skills > p{
+  text-align: center;
+  font-size: 50px;
+font-weight: bold;
+margin-right: 70%
+} 
+
+.lineRight {
+    position: absolute;
+    width: 34px;
+    height: 500px;
+    padding: 8px 8px 8px;
+    margin:0 0 0 97.5%;
+    background-color: #5292ad;
+    display: block;
+  
+}
+.lineLeft {
+    position: absolute;
+    width: 34px;
+    height: 500px;
+    padding: 8px 8px 8px 8px;
+    background-color: #5292ad;
+    display: block;
+}
+
+
+.skills-item{
+padding: 100px 20px;
+display: inline-block;
+vertical-align: top;
+text-align: center;
+}
+
+.skills-theme{
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  }
+
+.skills-img{
+  margin: 0 0 20px 0;
+}
+.skills-description{
+  width: 225px;
+  font-size: 14px;
+  height: 70px;
+  text-align: left;
+}
+
+.skills-border{
+    width: 180px;
+    height: 12px;
+    background: #ffffff;
+    border-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom: 20px;
+}
+
+
+/* 
+Works
+ */
+.works{
+    background-color: rgba(155, 155, 155, 0.667);
+    margin: 40px;
+    height: 400px;
+    text-align: center;
+    padding: 30px;
+}
+
+/* 
+Contact
+ */
+.contact{
+margin: 150px 0;
+
+}
+.contact h1{
+    text-align: center;
+}
+
+
+.form{
+text-align: center;
+}
+
+.form-table{
+display:inline-block;
+}
+
+
+
+.contact-body{
+text-align: left;
+padding-left: 30px;
+}
+
+.contact-body input{
+  padding: 6px;
+  margin: 10px;
+  width: 300px;
+  }
+
+  
+.textarea{
+    padding: 6px;
+    margin: 10px 0 0 30px;
+    width: 300px;
+    }
+
+    .form-btn{
+      text-align: center;
+      padding: 20px 0 0 30px;
+      }
+
+.submit{
+  background-color: #fff4c6;
+  padding: 18px 40px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: none;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+
+/* 
+Footer
+ */
+.footer{
+    background-color: #5292ad;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
