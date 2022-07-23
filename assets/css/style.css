@@ -194,7 +194,7 @@ margin-bottom: -150px;
 
 .about-btn{
   float: right;
-  padding-right: 170px;
+  padding-right: 10vw;
 }
 
 .btn {
@@ -479,6 +479,11 @@ Contact
   border: none;
   filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
 }
+
+.submit:hover{
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0));
+}
+
 
 /* 
 Footer
