@@ -478,6 +478,7 @@ Contact
   border-radius: 50px;
   border: none;
   filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+  transition: .3s;
 }
 
 .submit:hover{
