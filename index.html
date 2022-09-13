@@ -13,10 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
     
+    
 
 </head>
 <body>
     <header class="header">
+<!-- ハンバーガーメニュー -->
+<div id="drawer_toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<nav id="nav2">
 <!-- 左側のアイコンたち -->
         <ul class="icon">
             <li><a href="https://twitter.com/" target="_blank"> <img src="assets/images/header/twitter.svg" alt="Twitter" width="32px" height="32px"></a></li>
@@ -33,6 +41,7 @@
             <li><a href="#works">Works</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+    </nav>
     </header>
     <!-- 動いてもずっと表示されるメニュー -->
     <div class="always">
@@ -44,41 +53,41 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
-
     <section class="top" id="top">
         <video autoplay loop muted preload>
-            <source src="assets/videos/production ID_3702830.mp4" type="video/mp4">
+            <source src="assets/videos/milk.mp4" type="video/mp4">
         </video>
-        <h1>Yukine Kato</h1>
         <p>Thank you for visiting my website.</p>
     </section>
-    <section class="about-top" id="about">
-        <h1 class="about-title">About</h1>
-        <img class="about-image" src="assets/images/about/myphoto.JPG" alt="myphoto">
-        <p class="about-intro">初めまして。
-            22歳の加藤千音（Kato Yukine）です。
-            いろんなことに挑戦したいと考えています。よろしくお願い致します。
-        </p>
-    </section>
-    <section class="about-r" id="about">
-        <pre class="about-story">
-                <strong>2018~2020				小論文の講師のアルバイト</strong>
-                                                          <span style="font-size: 12px;">・大学受験向けの小論文の書き方指導と添削</span>
+    <section class="about">
+    <div class="about-title" id="about">
+        <p>About</p>
+    <p class="about-intro">
+        初めまして。加藤千音（Kato Yukine）です。2022年3月に大学を卒業し、現在はwebデザイナーになるために勉強中です。
+        まだまだ未熟者ですが、「webデザイン」の枠を超えてプラスαの価値がある人になりたいです。
+        <br>小学校から大学卒業まで剣道をしていたこともあり、忍耐力、継続力には自信を持っています。
+        <br>趣味はお菓子作りや裁縫、刺繍、映画鑑賞、カフェ巡りです。是非、「セイカツとシュミのフォト」をご覧ください。
+    </p>
+    <hr>
+    </div>
+    <div class="about2" >
+    <div class="about-left" >
+            <img class="about-image" src="assets/images/about/myphoto.JPG" alt="myphoto">
+    </div>
+    <div class="about-right">
+<div class="about-story">
+<p class="history"><strong style="font-weight: 500;">2018~2020 【大学時代】小論文の講師のアルバイト</strong></p>
+<p  class="history-d" style="font-size: 14px;" >大学受験向けの小論文の書き方指導と添削、進路相談などを担当。</p>
+<p class="history"><strong style="font-weight: 500;">2019~2022【大学時代】長期インターン</strong></p>
+<p class="history-d" style="font-size: 14px; ">不動産テックのベンチャー企業にて長期インターンシップ。
+<br>名刺、パンフレット、チラシ、ポスターの作成、
+<br>展示会のレイアウト考案、不動産管理サービスのUIUXデザインなど。</p>
+<p class="history"><strong style="font-weight: 500;">2022.4~ 【now!!】  日々webデザインの勉強中</strong></p>
+</div>
 
-                <strong>2019~2022 		        ベンチャー企業での長期インターン</strong>
-                                                        <span style="font-size: 12px;">  ・名刺、パンフレット、チラシ、ポスターの作成
-                                                                             ・展示会のレイアウト考案
-                                                                             ・不動産の管理サービスのUIUXデザインなど</span>
-
-                <strong>2022.4~6                   新卒で不動産投資の営業職</strong>
-                                                           <span style="font-size: 12px;">・新規個人顧客への電話営業
-                                                                              ・お客様先での商材案内</span>
-
-                <strong>2022.7~                        now!!</strong>
-        </pre>
 <!-- 自己紹介の代わりの写真 -->
     <div class="about-btn">
-        <a href="#" class="btn">セイカツとシュミ<br>の<br>フォト</a>
+        <a href="#" class="btn">セイカツとシュミのフォト →</a>
     </div>
 <!-- オーバーレイ -->
     <div class="overlay"></div>
@@ -115,16 +124,15 @@
         </div>
     </div>
 
-    <section></section>
-    </section>
-
+    <!-- <section></section> -->
+</div>
+</div>
+</section>
 
     <div class="clear_element"></div>
     <section class="skills" id="skills">
-       <p>Skills</p>
-        <div class="lineRight"></div>
-        <div class="lineLeft"></div>
-            <ul class="">
+        <p>Skills</p>
+            <ul>
                 <li class="skills-item">
                     <dl class="skills-grid">
                         <dt class="skills-theme">Adobe Illustrator</dt>
@@ -132,9 +140,7 @@
                         <img src="assets/images/skills/ai.png" width="100" height="100" alt="img"> 
                         </dd>
                         <dd class="skills-border border01"></dd>
-                        <dd class="skills-description">大学時代、４年間ほど日常的に使用。基本的な操作はできるがペイントや
-
-                            描画ツールは只今勉強中。</dd>
+                        <dd class="skills-description">大学時代、４年間ほど日常的に使用。基本的な操作はできるがペイントや描画ツールは只今勉強中。</dd>
                     </dl>
                 </li>
                 <li class="skills-item">
@@ -171,8 +177,15 @@
             </ul>
     </section>
     <section class="works" id="works">
-        <h1>Works</h1>
-        <p>comming soon</p>
+        <h1 class="works_title">Works</h1>
+        <div class="works-img">
+            <img src="/assets/images/works/グループ 7@2x.png" alt="work" width="400px">
+            <img src="/assets/images/works/グループ 7@2x.png" alt="work" width="400px">
+            <img src="/assets/images/works/グループ 7@2x.png" alt="work" width="400px">
+            <img src="/assets/images/works/グループ 7@2x.png" alt="work" width="400px">
+            <img src="/assets/images/works/グループ 7@2x.png" alt="work" width="400px">
+            <img src="/assets/images/works/グループ 7@2x.png" alt="work" width="400px">
+        </div>
     </section>
     <section class="contact" id="contact">
         <h1>Contact</h1>
@@ -222,6 +235,16 @@
     <footer class="footer">
         <small>@yukinekato</small>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+    $(function(){
+        $("#drawer_toggle").click(function(){
+        $(this).toggleClass("open");
+        $("#nav2").toggleClass("sp_open");
+    });
+    });
+    
+    </script>
 </body>
 </html>
